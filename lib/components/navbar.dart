@@ -17,6 +17,49 @@ class NavBar extends StatelessWidget {
     }).toList();
   }
 
+  Widget loginButton() {
+    return InkWell(
+      hoverColor: Colors.transparent,
+      onTap: () {},
+      child: Container(
+        width: 120,
+        height: 40,
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            colors: [
+              Color(0xFFC86DD7),
+              Color(0xFF3023AE),
+            ],
+            begin: Alignment.bottomRight,
+            end: Alignment.topLeft,
+          ),
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0xFF6078ea).withOpacity(.3),
+              offset: const Offset(0, 8),
+              blurRadius: 8,
+            )
+          ],
+        ),
+        child: const Material(
+          color: Colors.transparent,
+          child: Center(
+            child: Text(
+              'login',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                letterSpacing: 1,
+                fontFamily: "Montserrat-Bold",
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -50,6 +93,10 @@ class NavBar extends StatelessWidget {
               ),
               const Text("Britu", style: TextStyle(fontSize: 26))
             ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [...navItem(), const SizedBox(width: 16), loginButton()],
           )
         ],
       ),
