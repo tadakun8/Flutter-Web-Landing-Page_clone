@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_landingpage_clone/components/navbar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,9 +13,13 @@ class HomePage extends StatelessWidget {
           Color(0xFFFCFDFD),
         ]),
       ),
-      child: const Scaffold(
+      child: Scaffold(
         backgroundColor: Colors.transparent,
-        body: Placeholder(),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [NavBar()],
+          ),
+        ),
       ),
     );
   }
