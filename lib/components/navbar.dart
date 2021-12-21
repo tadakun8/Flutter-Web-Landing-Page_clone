@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_landingpage_clone/shared/responsive_layout.dart';
 
 class NavBar extends StatelessWidget {
   final navLinks = ["Home", "Products", "Features", "Contact"];
@@ -94,9 +95,19 @@ class NavBar extends StatelessWidget {
               const Text("Britu", style: TextStyle(fontSize: 26))
             ],
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [...navItem(), const SizedBox(width: 16), loginButton()],
+          ResponsiveLayout(
+            largeScreen: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ...navItem(),
+                const SizedBox(width: 16),
+                loginButton()
+              ],
+            ),
+            smallScreen: const Icon(
+              Icons.menu,
+              size: 36,
+            ),
           )
         ],
       ),
