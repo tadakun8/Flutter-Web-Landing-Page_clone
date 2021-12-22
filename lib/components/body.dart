@@ -13,9 +13,14 @@ class Body extends StatelessWidget {
           FractionallySizedBox(
             alignment: Alignment.centerRight,
             widthFactor: 0.6,
-            child: Image.asset(
-              'lib/assets/image_01.png',
-              scale: 0.85,
+            child: Padding(
+              padding: const EdgeInsets.only(
+                right: 48,
+              ),
+              child: Image.asset(
+                'lib/assets/image_01.png',
+                scale: 0.85,
+              ),
             ),
           ),
           FractionallySizedBox(
