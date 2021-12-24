@@ -64,10 +64,10 @@ class Body extends StatelessWidget {
                     padding: EdgeInsets.only(left: 12.0, top: 20),
                     child: Text("LET’S EXPLORE THE WORLD"),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
-                  Search()
+                  const Search()
                 ],
               ),
             ),
