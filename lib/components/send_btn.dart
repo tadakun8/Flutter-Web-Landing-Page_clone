@@ -28,6 +28,9 @@ class SendBtn extends StatelessWidget {
       child: Material(
         color: Colors.transparent,
         child: InkWell(
+          // inkWellのsplashの範囲を上記円形の範囲に合わせる
+          // 指定しなければ、splashがContainerのデフォルトとなる四角形になる
+          borderRadius: BorderRadius.circular(20),
           onTap: () {},
           child: Center(
             child: Row(
