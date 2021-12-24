@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_landingpage_clone/components/send_btn.dart';
 
 class Search extends StatelessWidget {
   const Search({Key? key}) : super(key: key);
@@ -31,6 +32,7 @@ class Search extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [
               Expanded(
+                flex: 8,
                 child: TextField(
                   decoration: InputDecoration(
                     border: InputBorder.none,
@@ -39,7 +41,8 @@ class Search extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: Placeholder(),
+                flex: 2,
+                child: SendBtn(),
               )
             ],
           ),
