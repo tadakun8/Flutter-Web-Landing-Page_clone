@@ -12,6 +12,15 @@ class ResponsiveLayout extends StatelessWidget {
       this.smallScreen})
       : super(key: key);
 
+  static bool isMediumScreen(BuildContext context) {
+    return MediaQuery.of(context).size.width >= 800 &&
+        MediaQuery.of(context).size.width < 1200;
+  }
+
+  static bool isLargeScreen(BuildContext context) {
+    return MediaQuery.of(context).size.width >= 1200;
+  }
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
@@ -21,9 +30,8 @@ class ResponsiveLayout extends StatelessWidget {
       //   return mediumScreen ?? largeScreen;
       // }
       // return smallScreen ?? largeScreen;
-      final displayWidth = MediaQuery.of(context).size.width;
-      if (displayWidth >= 1200) return largeScreen;
-      if (displayWidth < 1200 && displayWidth >= 800) {
+      if (isLargeScreen(context)) return largeScreen;
+      if (isMediumScreen(context)) {
         return mediumScreen ?? largeScreen;
       }
       return smallScreen ?? largeScreen;
