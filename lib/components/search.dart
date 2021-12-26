@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_landingpage_clone/components/send_btn.dart';
+import 'package:flutter_web_landingpage_clone/shared/responsive_layout.dart';
 
 class Search extends StatelessWidget {
   const Search({Key? key}) : super(key: key);
@@ -7,9 +8,9 @@ class Search extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(
+      padding: EdgeInsets.only(
         left: 4.0,
-        right: 74,
+        right: ResponsiveLayout.isSmallScreen(context) ? 4 : 74,
         top: 10,
         bottom: 40,
       ),

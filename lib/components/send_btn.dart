@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_landingpage_clone/shared/responsive_layout.dart';
 
 class SendBtn extends StatelessWidget {
   const SendBtn({Key? key}) : super(key: key);
@@ -35,26 +36,35 @@ class SendBtn extends StatelessWidget {
           child: Center(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 Text(
                   'Notify',
                   style: TextStyle(
                     color: Colors.white,
                     fontFamily: "Montserrat-Bold",
-                    fontSize: 16,
+                    fontSize: ResponsiveLayout.isSmallScreen(context)
+                        ? 12
+                        : ResponsiveLayout.isMediumScreen(context)
+                            ? 12
+                            : 20,
                   ),
                 ),
                 SizedBox(
-                  width: 8,
+                  width: ResponsiveLayout.isSmallScreen(context)
+                      ? 4
+                      : ResponsiveLayout.isMediumScreen(context)
+                          ? 6
+                          : 8,
                 ),
-                SizedBox(
-                  width: 20,
-                  height: 20,
-                  child: Icon(
-                    Icons.send,
-                    color: Colors.white,
-                  ),
-                )
+                Icon(
+                  Icons.send,
+                  color: Colors.white,
+                  size: ResponsiveLayout.isSmallScreen(context)
+                      ? 12
+                      : ResponsiveLayout.isMediumScreen(context)
+                          ? 12
+                          : 20,
+                ),
               ],
             ),
           ),
