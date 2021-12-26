@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_landingpage_clone/components/body.dart';
+import 'package:flutter_web_landingpage_clone/components/large_body.dart';
 import 'package:flutter_web_landingpage_clone/components/navbar.dart';
 
 class HomePage extends StatelessWidget {
@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         body: SingleChildScrollView(
           child: Column(
-            children: [NavBar(), const Body()],
+            children: [NavBar(), const LargeBody()],
           ),
         ),
       ),
