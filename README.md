@@ -6,4 +6,4 @@ This project is a rework of the following project from scratch to learn responsi
 
 ## Demo
 
-working...
+![demo](./demo.gif)
